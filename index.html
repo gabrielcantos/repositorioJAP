@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!--===============================================================================================-->
 </head>
- 
+
 <body>
 
 	<div class="limiter">
@@ -40,11 +40,12 @@
 
 					<div class="wrap-input100 validate-input m-b-16"
 						data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="nombre" required placeholder="Email">
+						<input class="input100" id="usuario" type="text" name="usuario" required placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="lnr lnr-envelope"></span>
-						</span>
+
+					</span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
@@ -63,11 +64,12 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-25">
-						 <button class="login100-form-btn">
+						<button class="login100-form-btn" id="ingreso" type="submit" onclick="guardar(usuario.value);">
+
 							Login
-		
-							</button>
-						
+
+						</button>
+
 					</div>
 
 					<div class="text-center w-full p-t-42 p-b-22">
