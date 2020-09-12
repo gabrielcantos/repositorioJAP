@@ -3,58 +3,137 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="registro" class="py-2 d-none d-md-inline-block" href=""></a>
+    <nav class="site-header sticky-top py-1 bg-dark">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+            <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+            <a id="registro" class="py-2 d-none d-md-inline-block" href="my-profile.html"></a>
+        </div>
+    </nav>
+
+    <div id="containerInfo"></div>
+    <main role="main">
+        <div class="container mt-5">
+            <div class="text-center p-4">
+                <h2 id="productName"></h2>
+
+            </div>
+
+            <hr class="my-3">
+            <dl>
+                <dt>Imágenes ilustrativas</dt>
+                <dd>
+
+                    <div class="row text-center text-lg-left pt-2" id="productImagesWrapper">
+                    </div>
+                </dd>
+                <dt>Precio</dt>
+                <dd>
+                    <p id="productCost"></p>
+                </dd>
+
+                <dt>Moneda</dt>
+                <dd>
+                    <p id="productCurrency"></p>
+                </dd>
+
+                <dt>Descripción</dt>
+                <dd>
+                    <p id="productDescription"></p>
+                </dd>
+
+                <dt>Categoría</dt>
+                <dd>
+                    <p id="productCategory"></p>
+                </dd>
+
+                <dt>Cantidad de vendidos</dt>
+                <dd>
+                    <p id="productSoldCount"></p>
+                </dd>
+                <hr>
+
+                <div id="add-comment" class="row ml-0 mt-3 mb-5 p-0">
+                    <dt>Comentarios</dt>
+                    <div class="col-sm-auto m-0 p-0">
+                        <br>
+
+                        <form name="myForm">
+                            <div class="row m-0 p-0">
+                                <textarea id="add-comment-text" placeholder="Haz un comentario sobre el producto" name="fname"></textarea>
+
+                            </div>
+                            <span class="fa fa-star" id="star1" onclick="add(1)"></span>
+                            <span class="fa fa-star" id="star2" onclick="add(2)"></span>
+                            <span class="fa fa-star" id="star3" onclick="add(3)"></span>
+                            <span class="fa fa-star" id="star4" onclick="add(4)"></span>
+                            <span class="fa fa-star" id="star5" onclick="add(5)"></span>
+
+
+                            <button id="add-comment-btn" type="button" onclick="" class="btn btn-primary ml-3">Comentar</button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <dd>
+                    <div class="container-fluid">
+                        <div class="row" id="comentarios">
+                            <p class="py-2 d-none d-md-inline-block" id="comentario"></p>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <hr>
+            <dt>Productos relacionados</dt>
+            <hr class="my-3">
+            <dd>
+                <div class="container-fluid">
+                    <div class="row" id="relatedProductsContainer">
+                    </div>
+                </div>
+            </dd>
+        </div>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Volver arriba</a>
+            </p>
+            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+    </footer>
+    <div id="spinner-wrapper">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/product-info.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/product-info.js"></script>
 </body>
 
 </html>
