@@ -21,25 +21,9 @@
 }
 
 @font-face {
-  font-family: Raleway-Regular;
-  src: url('../fonts/raleway/Raleway-Regular.ttf'); 
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
 }
-
-@font-face {
-  font-family: Raleway-Black;
-  src: url('../fonts/raleway/Raleway-Black.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-SemiBold;
-  src: url('../fonts/raleway/Raleway-SemiBold.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Bold;
-  src: url('../fonts/raleway/Raleway-Bold.ttf'); 
-}
-
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -74,7 +58,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #d33f8d;
+  color: #57b846;
 }
 
 /*---------------------------------------------*/
@@ -121,15 +105,15 @@ textarea:focus:-moz-placeholder { color:transparent; }
 textarea:focus::-moz-placeholder { color:transparent; }
 textarea:focus:-ms-input-placeholder { color:transparent; }
 
-input::-webkit-input-placeholder { color: #acacac; }
-input:-moz-placeholder { color: #acacac; }
-input::-moz-placeholder { color: #acacac; }
-input:-ms-input-placeholder { color: #acacac; }
+input::-webkit-input-placeholder { color: #999999; }
+input:-moz-placeholder { color: #999999; }
+input::-moz-placeholder { color: #999999; }
+input:-ms-input-placeholder { color: #999999; }
 
-textarea::-webkit-input-placeholder { color: #acacac; }
-textarea:-moz-placeholder { color: #acacac; }
-textarea::-moz-placeholder { color: #acacac; }
-textarea:-ms-input-placeholder { color: #acacac; }
+textarea::-webkit-input-placeholder { color: #999999; }
+textarea:-moz-placeholder { color: #999999; }
+textarea::-moz-placeholder { color: #999999; }
+textarea:-ms-input-placeholder { color: #999999; }
 
 /*---------------------------------------------*/
 button {
@@ -150,18 +134,17 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Raleway-Regular;
-  font-size: 16px;
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.5;
   color: #999999;
-  line-height: 1.4;
 }
 
-.bo1 {
-  border-bottom: 1px solid #999999;
-}
-
-.hov1:hover {
-  border-color: #d33f8d;
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
 }
 
 
@@ -185,62 +168,56 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #0250c5;
-  background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -o-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -moz-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: linear-gradient(bottom, #0250c5, #d43f8d);
-  position: relative;
-  z-index: 1;
-}
-
-.container-login100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: url('../images/img-01.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
 .wrap-login100 {
-  width: 450px;
+  width: 960px;
   background: #fff;
-  border-radius: 3px;
+  border-radius: 10px;
   overflow: hidden;
-}
 
-
-
-/*------------------------------------------------------------------
-[  ]*/
-.login100-form {
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 177px 130px 33px 95px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-pic {
+  width: 316px;
+}
+
+.login100-pic img {
+  max-width: 100%;
+}
+
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-form {
+  width: 290px;
 }
 
 .login100-form-title {
-  font-family: Raleway-Black;
-  font-size: 30px;
+  font-family: Poppins-Bold;
+  font-size: 24px;
   color: #333333;
   line-height: 1.2;
-  text-transform: uppercase;
   text-align: center;
 
   width: 100%;
   display: block;
+  padding-bottom: 54px;
 }
 
 
@@ -249,20 +226,21 @@ iframe {
   position: relative;
   width: 100%;
   z-index: 1;
+  margin-bottom: 10px;
 }
 
 .input100 {
-  font-family: Raleway-SemiBold;
-  font-size: 18px;
-  line-height: 1.2;
-  color: #686868;
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
 
   display: block;
   width: 100%;
   background: #e6e6e6;
-  height: 62px;
-  border-radius: 3px;
-  padding: 0 30px 0 65px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
 }
 
 
@@ -271,14 +249,14 @@ iframe {
 .focus-input100 {
   display: block;
   position: absolute;
-  border-radius: 3px;
+  border-radius: 25px;
   bottom: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(211,63,141, 0.6);
+  color: rgba(87,184,70, 0.8);
 }
 
 .input100:focus + .focus-input100 {
@@ -288,21 +266,20 @@ iframe {
 
 @-webkit-keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 60px 20px;
+    box-shadow: 0px 0px 70px 25px;
     opacity: 0;
   }
 }
 
 @keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 60px 20px;
+    box-shadow: 0px 0px 70px 25px;
     opacity: 0;
   }
 }
 
 .symbol-input100 {
-  font-size: 24px;
-  color: #999999;
+  font-size: 15px;
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -316,9 +293,9 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-left: 23px;
-  padding-bottom: 5px;
+  padding-left: 35px;
   pointer-events: none;
+  color: #666666;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -327,61 +304,9 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #d33f8d;
-  padding-left: 18px;
+  color: #57b846;
+  padding-left: 28px;
 }
-
-/*==================================================================
-[ Restyle Checkbox ]*/
-
-.input-checkbox100 {
-  display: none;
-}
-
-.label-checkbox100 {
-  font-family: Raleway-Regular;
-  font-size: 16px;
-  color: #999999;
-  line-height: 1.2;
-
-  display: block;
-  position: relative;
-  padding-left: 26px;
-  cursor: pointer;
-}
-
-.label-checkbox100::before {
-  content: "\f00c";
-  font-family: FontAwesome;
-  font-size: 13px;
-  color: transparent;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  background: #fff;
-  border: 2px solid #d33f8d;
-  left: 0;
-  top: 48%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.input-checkbox100:checked + .label-checkbox100::before {
-  color: #d33f8d;
-}
-
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -394,19 +319,20 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .login100-form-btn {
-  font-family: Raleway-Bold;
-  font-size: 16px;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
   line-height: 1.5;
   color: #fff;
   text-transform: uppercase;
 
   width: 100%;
-  height: 62px;
-  border-radius: 3px;
-  background: #d33f8d;
+  height: 50px;
+  border-radius: 25px;
+  background: #57b846;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -426,60 +352,46 @@ iframe {
   background: #333333;
 }
 
+
+
 /*------------------------------------------------------------------
-[ Button sign in with ]*/
-.btn-face,
-.btn-google {
-  font-family: Raleway-Bold;
-  font-size: 16px;
-  line-height: 1.2;
+[ Responsive ]*/
 
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc((100% - 10px) / 2);
-  height: 40px;
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
-  background-color: #fff;
 
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+
+@media (max-width: 992px) {
+  .wrap-login100 {
+    padding: 177px 90px 33px 85px;
+  }
+
+  .login100-pic {
+    width: 35%;
+  }
+
+  .login100-form {
+    width: 50%;
+  }
 }
 
+@media (max-width: 768px) {
+  .wrap-login100 {
+    padding: 100px 80px 33px 80px;
+  }
 
-.btn-face {
-  color: #3b5998;
+  .login100-pic {
+    display: none;
+  }
+
+  .login100-form {
+    width: 100%;
+  }
 }
 
-.btn-face i {
-  font-size: 20px;
-  margin-right: 10px;
-  padding-bottom: 1px;
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding: 100px 15px 33px 15px;
+  }
 }
-
-.btn-google {
-  color: #555555;
-}
-
-.btn-google img {
-  width: 19px;
-  margin-right: 10px;
-  padding-bottom: 1px;
-}
-
-
-.btn-face:hover,
-.btn-google:hover {
-  border-color: #d33f8d;
-}
-
 
 
 /*------------------------------------------------------------------
@@ -495,7 +407,7 @@ iframe {
   max-width: 70%;
   background-color: white;
   border: 1px solid #c80000;
-  border-radius: 3px;
+  border-radius: 13px;
   padding: 4px 25px 4px 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -506,7 +418,7 @@ iframe {
   right: 8px;
   pointer-events: none;
 
-  font-family: Raleway-SemiBold;
+  font-family: Poppins-Medium;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -522,7 +434,7 @@ iframe {
 }
 
 .alert-validate::after {
-  content: "\f12a";
+  content: "\f06a";
   font-family: FontAwesome;
   display: block;
   position: absolute;
@@ -546,15 +458,5 @@ iframe {
   .alert-validate::before {
     visibility: visible;
     opacity: 1;
-  }
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ responsive ]*/
-
-@media (max-width: 480px) {
-  .wrap-login100 {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }

@@ -9,7 +9,7 @@ var currentProductsArray = [];
 var currentSortCriteria = undefined;
 var minCount = undefined;
 var maxCount = undefined;
-// funcion que compara los valores de los productos
+
 function sortProducts(criteria, array) {
     let result = [];
 
@@ -42,7 +42,7 @@ function sortProducts(criteria, array) {
     };
     return result;
 };
-//funcion que muestra todos los productos desde un Json
+
 function showProductsList() {
 
     let htmlContentToAppend = "";
@@ -74,7 +74,21 @@ function showProductsList() {
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
 };
+// document.addEventListener("DOMContentLoaded", function (e) {
+//     getJSONData(PRODUCTS_URL).then(function (resultObj) {
+//        if (resultObj.status === "ok") {
+//            productsArray = resultObj.data;
+//              //Muestro las categorías ordenadas
+//               showProductsList(productsArray);
 
+//           }
+//
+//  });
+
+
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
 function sortAndShowProducts(sortCriteria, productsArray) {
     currentSortCriteria = sortCriteria;
 
@@ -137,3 +151,5 @@ document.getElementById("rangeFilterCount").addEventListener("click", function()
 
     showProductsList();
 });
+
+var cajaBuscador = document.getElementById("buscador");

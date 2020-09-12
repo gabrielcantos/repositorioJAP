@@ -5,7 +5,7 @@ var products = {};
 const maxScore = 5;
 
 
-//agrega comentarios que no estan en el JSON===================================================================================================
+//funcion para agregar Comentario() {
 document.getElementById("add-comment-btn").addEventListener("click", function() {
 
     var today = new Date();
@@ -80,7 +80,7 @@ function showCommentsList() {
 
     });
 }
-//funcion q pinta las estrellas seleccionadas//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function add(score) {
 
 
@@ -134,7 +134,7 @@ function showRelatedProducts(relatedProductsArray) {
 }
 
 
-//muestra las info del producto
+//
 document.addEventListener("DOMContentLoaded", function(e) {
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj) {
         if (resultObj.status === "ok") {
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 
-//muestra las estrellas, pero pinta las estrellas q le pasa la funcion add()===================================================================================================================================
+//¡¡¡¡ESTRELLAS!!!!===================================================================================================================================
 function showScore(score) {
 
     let stars = "";
