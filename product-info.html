@@ -22,8 +22,16 @@
             <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a id="registro" class="py-2 d-none d-md-inline-block" href="my-profile.html"></a>
+
+            <div class="dropdown">
+                <a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" role="button" id="registro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="cart.html">Mi carrito</a>
+                    <a class="dropdown-item" href="my-profile.html">Perfil</a>
+                    <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -60,7 +68,7 @@
 
                 <dt>Categoría</dt>
                 <dd>
-                    <p id="productCategory"></p>
+                    <a id="productCategory" href="categories.html"></a>
                 </dd>
 
                 <dt>Cantidad de vendidos</dt>
@@ -86,7 +94,7 @@
                             <span class="fa fa-star" id="star5" onclick="add(5)"></span>
 
 
-                            <button id="add-comment-btn" type="button" onclick="" class="btn btn-primary ml-3">Comentar</button>
+                            <button id="add-comment-btn" type="button" class="btn btn-primary ml-3">Comentar</button>
                         </form>
                     </div>
                 </div>

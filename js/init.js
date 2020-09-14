@@ -45,7 +45,7 @@ var getJSONData = function(url) {
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e) {
 
-    //imprime el contenido del button en la navbar
+    //imprime el contenido del localStorage en la navbar
     let usuario = localStorage.getItem("usuario");
     document.getElementById("registro").innerHTML += usuario;
 

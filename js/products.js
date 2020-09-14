@@ -10,6 +10,7 @@ var currentSortCriteria = undefined;
 var minCount = undefined;
 var maxCount = undefined;
 
+//funcion q ordena los productos en AS, DES y RE===========================================================================
 function sortProducts(criteria, array) {
     let result = [];
 
@@ -42,7 +43,7 @@ function sortProducts(criteria, array) {
     };
     return result;
 };
-
+//funcion q muestra los productos q estan en le Json====================================================================
 function showProductsList() {
 
     let htmlContentToAppend = "";
@@ -74,21 +75,8 @@ function showProductsList() {
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
 };
-// document.addEventListener("DOMContentLoaded", function (e) {
-//     getJSONData(PRODUCTS_URL).then(function (resultObj) {
-//        if (resultObj.status === "ok") {
-//            productsArray = resultObj.data;
-//              //Muestro las categorías ordenadas
-//               showProductsList(productsArray);
 
-//           }
-//
-//  });
-
-
-// });
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
+//funcion q muestra los productos ordenados////////////////////////////////////////////////////////////////////////////////////////////////
 function sortAndShowProducts(sortCriteria, productsArray) {
     currentSortCriteria = sortCriteria;
 
@@ -151,5 +139,3 @@ document.getElementById("rangeFilterCount").addEventListener("click", function()
 
     showProductsList();
 });
-
-var cajaBuscador = document.getElementById("buscador");

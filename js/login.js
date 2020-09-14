@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 function guardar(user) {
     if (user.trim() === "") {
 
-
+        alert("Error, el campo está vacío");
         //trim borra todo espacio en blanco ingresado
     } else {
         localStorage.setItem("usuario", user.trim());

@@ -5,7 +5,7 @@ var products = {};
 const maxScore = 5;
 
 
-//funcion para agregar Comentario() {
+// agregar Comentario===========================================================================
 document.getElementById("add-comment-btn").addEventListener("click", function() {
 
     var today = new Date();
@@ -36,6 +36,7 @@ document.getElementById("add-comment-btn").addEventListener("click", function() 
 
 
 });
+
 //funcion para mostrar la imagenes en formato de galería ////////////////////////////////////////////////////////////////////////////////////////
 function showProductsInfo(array) {
 
@@ -57,7 +58,7 @@ function showProductsInfo(array) {
 
 
 }
-// funcion para mostrar los comentarios////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// funcion para mostrar los comentarios del Json////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function showCommentsList() {
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj) {
         if (resultObj.status === "ok") {
@@ -80,7 +81,7 @@ function showCommentsList() {
 
     });
 }
-
+//funcion para elegir puntuacion en formato de estrellas============================================================
 function add(score) {
 
 
@@ -88,7 +89,7 @@ function add(score) {
         var cur = document.getElementById("star" + i)
         cur.className = "fa fa-star"
     }
-
+    showScore(score)
     for (var i = 1; i <= score; i++) {
         var cur = document.getElementById("star" + i)
         if (cur.className == "fa fa-star") {
@@ -134,7 +135,7 @@ function showRelatedProducts(relatedProductsArray) {
 }
 
 
-//
+//muestra toda la info del JSon sobre el producto===================================================================
 document.addEventListener("DOMContentLoaded", function(e) {
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj) {
         if (resultObj.status === "ok") {
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 
-//¡¡¡¡ESTRELLAS!!!!===================================================================================================================================
+//funcion q muestra las estrellas e interpreta cuntas se seleccionaron cuando se hace un comentario===================================================================================================================================
 function showScore(score) {
 
     let stars = "";
@@ -174,15 +175,18 @@ function showScore(score) {
     for (let i = 1; i <= maxScore; i++) {
         if (i <= score) {
             stars += '<i class="fa fa-star checked"></i>';
+
         } else {
             stars += '<i class="fa fa-star"></i>';
+
         }
+
     }
 
-    htmlscore = `<span>  ${stars}</span>`
+
+
+    htmlscore = `<span>  ${stars} </span>`
     return htmlscore;
-
-
 
 
 }
