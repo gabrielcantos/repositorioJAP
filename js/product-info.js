@@ -7,22 +7,24 @@ const maxScore = 5;
 
 // agregar Comentario===========================================================================
 document.getElementById("add-comment-btn").addEventListener("click", function() {
-
+    //uso la clase Date de js para obtener la hora actual
     var today = new Date();
+    var mes = parseInt(today.getMonth() + 1);
     var mes = parseInt(today.getMonth() + 1);
 
     if (mes < 10) {
         mes = "0" + mes
     }
-
-    today = today.getFullYear() + '-' + mes + '-' + today.getDate() + '  ' + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    // separo la fecha para que me muestre en orden dd/mm/aaaa y hh/mm/ss
+    today = today.getFullYear() + '-' + mes + '-' + today.getDate() + ' ' + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    //obtengo el usuario del localstorage               
     let usuario = localStorage.getItem("usuario");
 
     let newComment = document.getElementById("add-comment-text").value;
 
 
     let newScore = htmlscore;
-
+    //armo el html con estilos para q se vea bien
     let htmlContentToAppend = ` 
     <div class="d-flex w-100 ">  
             <h4 class="mb-1"> ` + usuario + `</h4> 
@@ -37,27 +39,7 @@ document.getElementById("add-comment-btn").addEventListener("click", function() 
 
 });
 
-//funcion para mostrar la imagenes en formato de galería ////////////////////////////////////////////////////////////////////////////////////////
-function showProductsInfo(array) {
 
-    let htmlContentToAppend = "";
-
-    for (let i = 0; i < array.length; i++) {
-        let imagesSrc = array[i];
-
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div>
-                <img class="img-fluid img-thumbnail" src="` + imagesSrc + `" alt="">
-            </div>
-        </div>
-        `
-
-        document.getElementById("productImagesWrapper").innerHTML = htmlContentToAppend;
-    }
-
-
-}
 // funcion para mostrar los comentarios del Json////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function showCommentsList() {
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj) {
@@ -113,7 +95,7 @@ function showRelatedProducts(relatedProductsArray) {
             for (let i = 0; i < relatedProductsArray.length; i++) {
                 let relatedProductsPosition = relatedProductsArray[i];
                 let relatedProducts = relatedList[relatedProductsPosition];
-
+                //creo la estructura de los relacionados con sus estilos
                 htmlRelatedProducts += ` 
                 <div class = "col-lg-3 col-md-4 col-6 border" >
                     <div id = "relatedProductsContainer"class = "row" >
@@ -122,7 +104,7 @@ function showRelatedProducts(relatedProductsArray) {
                                         
                     <div id = "relatedProductsContainer"class = "row p-2" >
                         <p>` + relatedProducts.name + ` </p>  
-                        <p> ` + relatedProducts.description + ` </p>
+                        <p>` + relatedProducts.description + ` </p>
                     </div> 
                     <div class = "row p-2">
                         <a href = "product-info.html" > Ver </a> 
@@ -157,16 +139,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
             productCategoryHTML.innerHTML = product.category;
             productCostHTML.innerHTML = product.cost;
 
-            //Muestro las imagenes y los productos relacionados 
-            showProductsInfo(product.images);
+            //Muestro los productos relacionados y los comentarios
+
             showRelatedProducts(product.relatedProducts);
             showCommentsList(productComments)
         }
+
     })
 });
 
 
-//funcion q muestra las estrellas e interpreta cuntas se seleccionaron cuando se hace un comentario===================================================================================================================================
+//funcion q muestra las estrellas e interpreta cuantas se seleccionaron cuando se hace un comentario===================================================================================================================================
 function showScore(score) {
 
     let stars = "";

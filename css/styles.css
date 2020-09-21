@@ -127,6 +127,15 @@ footer p {
     }
 }
 
+.d-block {
+    width: 50%;
+    height: 50%;
+}
+
+.estilosbotonimagen {
+    width: 50%;
+}
+
 #spinner-wrapper {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
