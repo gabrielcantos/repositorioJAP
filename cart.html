@@ -52,27 +52,62 @@
             </div>
         </div>
     </nav>
-    <div class="container p-5">
-        <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-            <h4 class="alert-heading">¡A trabajar! :)</h4>
-            <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-            <hr>
-            <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <div class="container">
+
+        <!--productos-->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Costo</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-products">
+            </tbody>
+        </table>
+        <!--Costos-->
+        <div class="row">
+            <div class="col">
+
+                <ul class="list-group mb-3">
+                    <li class="list-group-item justify-content-between d-flex">
+                        <p id="envio">Tipo de envío </p>
+                        <form>
+                            <input type="radio" id="Premium" name="envio" value="Premium">
+                            <label for="Premium">Premium 2 a 5 días (15%)</label><br>
+                            <input type="radio" id="Express" name="envio" value="Express">
+                            <label for="Express">Express 5 a 8 días (7%)</label><br>
+                            <input type="radio" id="Standard" name="envio" value="Standard">
+                            <label for="Standard">Standard 12 a 15 días (5%)</label><br>
+                        </form>
+                    </li>
+                    <hr>
+                    <h4 class="mb-3"> Costos</h4>
+                    <li class="list-group-item justify-content-between d-flex">
+                        <h5>SubTotal </h5><span id="subtotal"></span></li>
+                    <li class="list-group-item justify-content-between d-flex">
+                        <h5>Total </h5><span id="total"></span></li>
+                </ul>
+            </div>
+            <div id="spinner-wrapper">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <script src="js/jquery-3.4.1.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/dropzone.js"></script>
+            <script src="js/init.js"></script>
+            <script src="js/cart.js"></script>
         </div>
     </div>
-    <div id="spinner-wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/cart.js"></script>
 </body>
 
 </html>

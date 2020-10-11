@@ -5,6 +5,10 @@
     font-family: 'Raleway', serif !important;
 }
 
+#envio {
+    font-size: 25px;
+}
+
 .jumbotron .display-4 {
     font-weight: bold;
 }
