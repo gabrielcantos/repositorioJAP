@@ -5,7 +5,26 @@
     font-family: 'Raleway', serif !important;
 }
 
-#envio {
+#botonCompra {
+    width: 130px;
+    height: 70px;
+    margin-left: 500px;
+}
+
+#alinear {
+    margin-left: 450px;
+}
+
+#dire {
+    width: 50px;
+}
+
+#dir {
+    font-size: 25px;
+    text-align: center;
+}
+
+#envios {
     font-size: 25px;
 }
 
