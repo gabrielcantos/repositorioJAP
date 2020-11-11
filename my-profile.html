@@ -27,6 +27,21 @@
                 font-size: 3.5rem;
             }
         }
+        
+        .abs-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+        }
+        
+        .form {
+            width: 250px;
+        }
+        
+        #guardarCambios {
+            margin-left: 34px;
+        }
     </style>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -52,25 +67,44 @@
             </div>
         </div>
     </nav>
-    <div class="container p-5">
-        <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-            <h4 class="alert-heading">¡A trabajar! :)</h4>
-            <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-            <hr>
-            <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <br>
+
+    <img style="margin-left: 633px; height: 80px; margin-bottom: 10px; " src="images/icons/perfil.png">
+    <div class="container">
+        <div class="abs-center">
+            <form action="#" class="border p-3 form">
+                <div class="form-group">
+
+                    <label for="nombreUsuario">Nombre:</label>
+                    <input id="nombreUsuario" type="text" required>
+                    <br>
+                    <br>
+                    <label for="apellidoUsuario">Apellido:</label>
+                    <input id="apellidoUsuario" type="text" required>
+                    <br>
+                    <br>
+                    <label for="edadUsuario">Edad:</label>
+                    <input id="edadUsuario" min="15" type="number" required>
+                    <br>
+                    <br>
+                    <label for="emailUsuario">Email:</label>
+                    <input id="emailUsuario" type="email" required>
+                    <br>
+                    <br>
+                    <label for="celularUsuario">Celular:</label>
+                    <input id="celularUsuario" type="number" required>
+                    <br>
+                    <br>
+                    <button id="guardarCambios" type="submit">
+                        Guardar cambios
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-    <footer class="text-muted bg-light">
-        <div class="container">
-            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-        </div>
-    </footer>
-    <div class="alert fade alert-success" role="alert" id="alertResult">
-        <span id="resultSpan"></span>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    </form>
+    <div id="perfil">
+
     </div>
     <div id="spinner-wrapper">
         <div class="lds-ring">
